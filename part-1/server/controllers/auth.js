@@ -1,6 +1,9 @@
+let bcrypt = require('bcryptjs');
+
+
 const users = []
 
-let startingId = 0
+let startingId = 1
 
 module.exports = {
     login: (req, res) => {
@@ -11,7 +14,7 @@ module.exports = {
         if (users[i].username === username) {
 
           if (bcrypt.compareSync(password, users[i].password)) {
-            
+
             res.status(200).send(users[i])
           }
         }
@@ -35,8 +38,8 @@ module.exports = {
 
 
         console.log('Registering User')
-        console.log(req.body)
         users.push(req.body)
+        console.log(users)
         res.status(200).send(req.body)
 
     startingId++
