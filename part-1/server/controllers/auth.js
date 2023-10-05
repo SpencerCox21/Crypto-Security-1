@@ -11,15 +11,18 @@ module.exports = {
       console.log(req.body)
       const { username, password } = req.body
       for (let i = 0; i < users.length; i++) {
-        if (users[i].username === username) {
-
-          if (bcrypt.compareSync(password, users[i].password)) {
+        if (users[i].username === username && bcrypt.compareSync(password, users[i].password)) {
+         
+            
 
             res.status(200).send(users[i])
-          }
+        
+        }
+        else {
+
+          res.status(400).send("User not found.")
         }
       }
-      res.status(400).send("User not found.")
     },
     register: (req, res) => {
 
@@ -38,7 +41,7 @@ module.exports = {
 
 
         console.log('Registering User')
-        users.push(req.body)
+        // users.push(req.body)
         console.log(users)
         res.status(200).send(req.body)
 
