@@ -8,10 +8,22 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 ! ? . ,
 z u v w x y p q r s t k l m n o f g h i j a b c d e 5 6 7 8 9 0 1 2 3 4 ? ! , .
 
 
+It would be to much to type out but I would do the same for capital letters as well.
+
 My cipher takes the alphabet and reverse's it, however it does that in increments of 5 so v-z is changed to a-e.
 However since there are 26 letters in the alphabet, z was left over... so I just put it in the front so a is changed to z.
 I then did the same with numbers 0-9 so that numbers would be included.
 I then swapped ?-! and ,-. just to make sure some punctuation would be added in there.
+
+In order to decipher it I would have the same cipher but I would just reverse it so instead of changing 
+the top line to the bottom I would just change the bottom line to the top.
+
+
+
+So if I input "I love cryptography!" it would turn into "R knax vgdoinpgzoqd?"
+
+If I were to decipher "R knax vgdoinpgzoqd?" I should get "I love cryptography!"
+
 
 
 
